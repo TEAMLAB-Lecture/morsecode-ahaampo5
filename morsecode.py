@@ -160,7 +160,7 @@ def get_cleaned_english_sentence(raw_english_sentence):
     result = None
     p = re.compile(r'[\.\,\!\?]')
     p_after = p.sub('',raw_english_sentence)
-    result = p_after.strip().upper()
+    result = p_after.strip()
     return result
     # ==================================
 
