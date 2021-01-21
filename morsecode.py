@@ -279,7 +279,7 @@ def encoding_sentence(english_sentence):
     result = ''
     morse = get_morse_code_dict()
     cleaned_english_sentence = get_cleaned_english_sentence(english_sentence)
-    for i in cleaned_english_sentence:
+    for i in cleaned_english_sentence.upper():
         if i == ' ':
             result += i
         else:
