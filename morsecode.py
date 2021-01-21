@@ -159,7 +159,9 @@ def get_cleaned_english_sentence(raw_english_sentence):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     result = None
     p = re.compile(r'[\.\,\!\?]')
+    p1 = re.compile(r'[\s]+')
     p_after = p.sub('',raw_english_sentence)
+    p_after = p1.sub(' ',p_after)
     result = p_after.strip()
     return result
     # ==================================
